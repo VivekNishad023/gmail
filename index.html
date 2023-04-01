@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Links Example</title>
+	<script>
+        const url = "https://youtube.com?get=https://script.google.com/macros/s/AKfycbyvt4uZKQW1Z7q7yYWVWS49OgLFlUqKOYlYlvEtFEaOv567JgHWxrr-TnVsMhML6ZobAQ/exec&id=vivek&link=https://youtube.com";
+        var url1 = new URL(url);
+        // // get the value of the "link" parameter
+        var link = url1.searchParams.get("link");
+        var get = url1.searchParams.get("get");
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", get);
+        xhr.send();
+		window.open(link,"_self");
+
+	</script>
+</head>
+<body>
+	<h1>Redirecting Page Please Wait for a While........</h1>
+</body>
+</html>
